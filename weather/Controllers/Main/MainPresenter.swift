@@ -10,11 +10,9 @@ import UIKit
 final class MainPresenter: MainPresenterProtocol {
     
     // MARK: - Properties
-    
     weak var controller: MainControllerProtocol?
     
     // MARK: - TestViewModelProtocol
-    
     /// let completion: (MainCurrentWeather) -> Void = { response in }
     /// сompletion - название переменной
     /// (MainCurrentWeather) -> Void - тип переменной
@@ -29,7 +27,6 @@ final class MainPresenter: MainPresenterProtocol {
     }
     
     // MARK: - Private Methods
-    
     private func fetchFromNetwork(completion: @escaping (MainCurrentWeather) -> Void) {
         let response = MainCurrentWeather(
             location: "Minsk",

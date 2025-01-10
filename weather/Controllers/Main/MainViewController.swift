@@ -10,7 +10,6 @@ import UIKit
 final class MainViewController: UIViewController, MainControllerProtocol {
     
     // MARK: - Nested Types
-    
     private enum Constants {
         
         static let normalInset: CGFloat = 16.0
@@ -24,14 +23,11 @@ final class MainViewController: UIViewController, MainControllerProtocol {
     }
     
     // MARK: - Properties
-    
-    
     private let presenter: MainPresenterProtocol
     
     private var currentWeather: MainCurrentWeather?
     
     // MARK: - UI
-    
     private var compositionalLayout: UICollectionViewLayout {
         UICollectionViewCompositionalLayout{ [weak self] section, _ in
             self?.layoutSection(for: .init(rawValue: section))
@@ -52,7 +48,6 @@ final class MainViewController: UIViewController, MainControllerProtocol {
     }()
     
     // MARK: - Init
-    
     init(presenter: MainPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -73,7 +68,6 @@ final class MainViewController: UIViewController, MainControllerProtocol {
     }
     
     // MARK: - MainControllerProtocol
-    
     func display(model: MainCurrentWeather) {
         currentWeather = model
         
@@ -81,7 +75,6 @@ final class MainViewController: UIViewController, MainControllerProtocol {
     }
     
     // MARK: - Private Methods
-    
     private func setupViews() {
         view.addSubview(collectionView)
     }
