@@ -11,6 +11,15 @@
 		74D750A72BD2FCB800586CC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D750A62BD2FCB800586CC0 /* SceneDelegate.swift */; };
 		74D750AE2BD2FCB900586CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D750AD2BD2FCB900586CC0 /* Assets.xcassets */; };
 		74D750B12BD2FCB900586CC0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 74D750B02BD2FCB900586CC0 /* Base */; };
+		8415984D2D331CB90048C5A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415984A2D331CB90048C5A0 /* MainViewController.swift */; };
+		8415984E2D331CB90048C5A0 /* MainCurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598432D331CB90048C5A0 /* MainCurrentWeather.swift */; };
+		8415984F2D331CB90048C5A0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598492D331CB90048C5A0 /* MainPresenter.swift */; };
+		841598502D331CB90048C5A0 /* MainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598462D331CB90048C5A0 /* MainPresenterProtocol.swift */; };
+		841598512D331CB90048C5A0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598482D331CB90048C5A0 /* MainAssembly.swift */; };
+		841598522D331CB90048C5A0 /* MainControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598452D331CB90048C5A0 /* MainControllerProtocol.swift */; };
+		841598572D331CD00048C5A0 /* TableViewWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598542D331CD00048C5A0 /* TableViewWeatherCell.swift */; };
+		841598582D331CD00048C5A0 /* CurrentWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598532D331CD00048C5A0 /* CurrentWeatherCell.swift */; };
+		841598592D331CD00048C5A0 /* WeekWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841598552D331CD00048C5A0 /* WeekWeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		74D750AD2BD2FCB900586CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D750B02BD2FCB900586CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D750B22BD2FCB900586CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841598432D331CB90048C5A0 /* MainCurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentWeather.swift; sourceTree = "<group>"; };
+		841598452D331CB90048C5A0 /* MainControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerProtocol.swift; sourceTree = "<group>"; };
+		841598462D331CB90048C5A0 /* MainPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterProtocol.swift; sourceTree = "<group>"; };
+		841598482D331CB90048C5A0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		841598492D331CB90048C5A0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		8415984A2D331CB90048C5A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		841598532D331CD00048C5A0 /* CurrentWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCell.swift; sourceTree = "<group>"; };
+		841598542D331CD00048C5A0 /* TableViewWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWeatherCell.swift; sourceTree = "<group>"; };
+		841598552D331CD00048C5A0 /* WeekWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +54,7 @@
 		74D750982BD2FCB800586CC0 = {
 			isa = PBXGroup;
 			children = (
-				74D750A32BD2FCB800586CC0 /* weather */,
+				74D750A32BD2FCB800586CC0 /* Weather */,
 				74D750A22BD2FCB800586CC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,13 +67,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74D750A32BD2FCB800586CC0 /* weather */ = {
+		74D750A32BD2FCB800586CC0 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				841598562D331CD00048C5A0 /* Cells */,
 				74D750B92BD2FEAF00586CC0 /* Application */,
 				74D750B82BD2FDE200586CC0 /* SupportingFiles */,
+				8415984C2D331CB90048C5A0 /* Controllers */,
 			);
-			path = weather;
+			path = Weather;
 			sourceTree = "<group>";
 		};
 		74D750B82BD2FDE200586CC0 /* SupportingFiles */ = {
@@ -75,6 +95,53 @@
 				74D750A62BD2FCB800586CC0 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		841598442D331CB90048C5A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				841598432D331CB90048C5A0 /* MainCurrentWeather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		841598472D331CB90048C5A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				841598452D331CB90048C5A0 /* MainControllerProtocol.swift */,
+				841598462D331CB90048C5A0 /* MainPresenterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8415984B2D331CB90048C5A0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				841598442D331CB90048C5A0 /* Models */,
+				841598472D331CB90048C5A0 /* Protocols */,
+				841598482D331CB90048C5A0 /* MainAssembly.swift */,
+				841598492D331CB90048C5A0 /* MainPresenter.swift */,
+				8415984A2D331CB90048C5A0 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8415984C2D331CB90048C5A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8415984B2D331CB90048C5A0 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		841598562D331CD00048C5A0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				841598532D331CD00048C5A0 /* CurrentWeatherCell.swift */,
+				841598542D331CD00048C5A0 /* TableViewWeatherCell.swift */,
+				841598552D331CD00048C5A0 /* WeekWeatherCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74D7509C2BD2FCB800586CC0 /* Build configuration list for PBXProject "weather" */;
+			buildConfigurationList = 74D7509C2BD2FCB800586CC0 /* Build configuration list for PBXProject "Weather" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +214,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841598572D331CD00048C5A0 /* TableViewWeatherCell.swift in Sources */,
+				841598582D331CD00048C5A0 /* CurrentWeatherCell.swift in Sources */,
+				841598592D331CD00048C5A0 /* WeekWeatherCell.swift in Sources */,
 				74D750A52BD2FCB800586CC0 /* AppDelegate.swift in Sources */,
+				8415984D2D331CB90048C5A0 /* MainViewController.swift in Sources */,
+				8415984E2D331CB90048C5A0 /* MainCurrentWeather.swift in Sources */,
+				8415984F2D331CB90048C5A0 /* MainPresenter.swift in Sources */,
+				841598502D331CB90048C5A0 /* MainPresenterProtocol.swift in Sources */,
+				841598512D331CB90048C5A0 /* MainAssembly.swift in Sources */,
+				841598522D331CB90048C5A0 /* MainControllerProtocol.swift in Sources */,
 				74D750A72BD2FCB800586CC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +426,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74D7509C2BD2FCB800586CC0 /* Build configuration list for PBXProject "weather" */ = {
+		74D7509C2BD2FCB800586CC0 /* Build configuration list for PBXProject "Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74D750B32BD2FCB900586CC0 /* Debug */,
