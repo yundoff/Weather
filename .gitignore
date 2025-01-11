@@ -1,0 +1,14 @@
+# MacOS system files
+.DS_Store
+
+# Xcode-specific files
+*.xcuserdata
+*.xcworkspace
+DerivedData/
+build/
+
+# Logs
+*.log
+
+# Temporary files
+.tmp/
